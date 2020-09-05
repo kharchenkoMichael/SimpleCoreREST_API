@@ -5,13 +5,13 @@ URL:
 POST REQUEST - http://localhost:8080/route
 
 Input:
-•	Input payload structure has the following hierarchy – 
+* Input payload structure has the following hierarchy – 
 o	Route -> Stop -> Object
-•	A route can have multiple stops
-•	A stop can have multiple objects
-•	Sample input (JSON)
+* A route can have multiple stops
+* A stop can have multiple objects
+* Sample input (JSON)
  
 Output:
-•	Response should be a flattened denormalized structure of the input
-•	Sample Output (JSON)
+* Response should be a flattened denormalized structure of the input
+* Sample Output (JSON)
  
