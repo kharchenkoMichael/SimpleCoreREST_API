@@ -11,13 +11,7 @@ namespace SimpleCoreREST_API.Services
     public List<DenormolizeRoute> Invoke(Route route)
     {
       return route.Stops
-        .SelectMany(stop => stop.Objects.Select(obj => new DenormolizeRoute
-        {
-          RouteName = route.RouteName,
-          StopName = stop.StopName,
-          ObjectType = obj.ObjectType,
-          ObjectName = obj.ObjectName
-        }))
+        .SelectMany(stop => stop.Objects.Select(obj => new DenormolizeRoute(route.RouteName, stop.StopName, obj.ObjectType, obj.ObjectName)))
         .ToList();
     }
   }
